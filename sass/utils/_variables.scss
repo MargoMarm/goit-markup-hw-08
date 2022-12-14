@@ -1,0 +1,29 @@
+:root {
+  --transition-link: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-soclink: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-link-client: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+$colors: (
+	'main-text': #757575,
+	'title': #212121,
+	'title-secondary': #ffffff,
+	'adress':rgba(255, 255, 255, 0.6),
+	'accent': #2196f3,
+	'btn-active': #188ce8,
+	'filter-btn': #f5f4fa,
+	'bcg':#ffffff,
+	'bcg-secondary' : #f5f4fa,
+	'bcg-footer': #2f303a,
+	'border-header': #ececec,
+	'icon': #afb1b8,
+	'icon-bcg-footer':rgba(255, 255, 255, 0.1),
+	'overlay': rgba(0, 0, 0, 0.2),
+);
+
+@function getColor($color) {
+	@return map-get($colors, $color);
+}
+

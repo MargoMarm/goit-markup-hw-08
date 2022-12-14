@@ -1,0 +1,29 @@
+.contacts {
+  display: flex;
+  margin-left: auto;
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: getColor("main-text");
+  transition: var(--transition-link);
+  @extend %link-font;
+
+  &:hover,
+  &:focus {
+    color: getColor("accent");
+  }
+}
+

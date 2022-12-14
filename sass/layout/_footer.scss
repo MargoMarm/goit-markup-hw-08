@@ -1,0 +1,19 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: getColor('bcg-footer');
+
+  &__wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+  &__addres-wrapper {
+  margin-right: 90px;
+}
+
+  &__social-wrapper {
+  margin-right: 93px;
+}
+}

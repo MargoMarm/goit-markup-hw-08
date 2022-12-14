@@ -1,0 +1,20 @@
+.form-heading {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.09;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: getColor('title');
+  margin-bottom: 12px;
+}
+
+
+.form-submit {
+	@extend %btn;
+	display: block;
+  min-width: 200px;
+  margin: 0 auto;
+  padding: 10px 52px;
+}
+
+

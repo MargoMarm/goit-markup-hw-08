@@ -1,0 +1,50 @@
+.term-field {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    @extend %visually-hidden;
+  }
+
+  &__link {
+	  position: relative;
+     color: getColor("accent");
+
+	 &::after {
+		 position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: getColor("accent");
+	 }
+  }
+}
+
+.term-field__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  border: 2px solid getColor("title");
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  .term-field__checkbox:checked + & {
+    border-color: getColor("accent");
+    background-color: getColor("accent");
+    background-image: url(../images/cheked.svg);
+
+    background-position: center;
+  }
+}

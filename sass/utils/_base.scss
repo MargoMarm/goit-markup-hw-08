@@ -1,0 +1,13 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: getColor('main-text');
+  background-color: getColor('bcg') ;
+  margin: 0;
+}
+
+.img {
+  display: block;
+}

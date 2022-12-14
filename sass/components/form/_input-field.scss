@@ -1,0 +1,41 @@
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  &__label {
+   @extend %label;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+}
+
+.input-field__input {
+  @extend %input;
+  padding-left: 42px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  height: 40px;
+  
+  &:focus {  
+	  border-color: getColor("accent");
+	}
+
+	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: getColor("title");
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .input-field__input:focus + & {
+  fill: getColor('accent')
+}
+}

@@ -1,0 +1,38 @@
+.social {
+  @extend %centered;
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.social__item {
+  width: 44px;
+  height: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: getColor("icon");
+  transition: var(--transition-soclink);
+
+  &:hover,
+  &:focus {
+    background-color: getColor("accent");
+    color: getColor("title-secondary");
+  }
+
+  &--footer {
+    background: getColor("icon-bcg-footer");
+    color: getColor("title-secondary");
+  }
+}

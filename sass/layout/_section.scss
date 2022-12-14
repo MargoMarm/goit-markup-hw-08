@@ -1,0 +1,19 @@
+.section {
+  padding: 94px 0;
+
+  &--work{
+  padding-top: 0;
+  text-align: center;
+}
+
+  &--team{
+  text-align: center;
+  background-color: getColor("bcg-secondary");
+}
+
+ &--clients{
+  text-align: center;
+}
+}
+
+

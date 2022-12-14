@@ -1,0 +1,34 @@
+.clients {
+  @extend %centered;
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.clients__item {
+  width: 170px;
+  height: 92px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients__link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: getColor("icon");
+  transition: var(--transition-link-client);
+
+  &:hover,
+  &:focus {
+    color: getColor("accent");
+    border-color: getColor("accent");
+  }
+}
