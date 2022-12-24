@@ -1,0 +1,81 @@
+.menu-toggle {
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.menu-toggle:hover .mob-menu__icon,
+.menu-toggle:focus .mob-menu__icon {
+  fill: getColor("accent");
+}
+
+.menu-container {
+  @media (max-width:767px) {
+	   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
+    background-color: white;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    &.is-open {
+      transform: translateX(0);
+    }
+  }
+   
+  
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.mob-menu__btn {
+  position: absolute;
+  right: 15px;
+  top: 19px;
+}
+
+.mob-menu__social {
+  display: flex;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mob-menu__social-item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 10px;
+    &::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(33, 33, 33, 0.2);
+    }
+  }
+}
+
+.mob-menu__social-link {
+  font-size: 18px;
+  line-height: 1.22;
+  color: getColor("accent");
+  padding-right: 10px;
+}

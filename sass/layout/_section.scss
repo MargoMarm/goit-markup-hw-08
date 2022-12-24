@@ -1,19 +1,24 @@
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 
-  &--work{
-  padding-top: 0;
-  text-align: center;
+  @media (min-width: 1200px) {
+    padding: 94px 0;
+  }
+
+  &--work {
+    @media (max-width: 1200px) {
+      display: none;
+    }
+    padding-top: 0;
+    text-align: center;
+  }
+
+  &--team {
+    text-align: center;
+    background-color: getColor("bcg-secondary");
+  }
+
+  &--clients {
+    text-align: center;
+  }
 }
-
-  &--team{
-  text-align: center;
-  background-color: getColor("bcg-secondary");
-}
-
- &--clients{
-  text-align: center;
-}
-}
-
-

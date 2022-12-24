@@ -1,17 +1,32 @@
 .clients {
-  @extend %centered;
+  display: flex;
 
   &__icon {
     fill: currentColor;
   }
+
+  @media (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .clients__item {
-  width: 170px;
   height: 92px;
+  width: calc((100% - 30px * 2) / 2);
+  margin: 15px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media (min-width: 768px) {
+    width: calc((100% - 30px * 3) / 3);
+  }
+
+  @media (min-width: 1200px) {
+    width: 170px;
+    height: 92px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 

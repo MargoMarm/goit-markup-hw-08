@@ -2,16 +2,20 @@
   color: getColor('adress');
   font-size: 14px;
   font-style: normal;
-  line-height: 1.71;
+  line-height: 1.14;
   transition: var(--transition-link);
 
   &:hover, &:focus{
   color: getColor("title-secondary");
+}
+
+@media (min-width:1200px) {
+	  line-height: 1.71;
+
 }
 }
 
 .address__item:not(:last-child) {
   margin-bottom: 12px;
 }
-
 

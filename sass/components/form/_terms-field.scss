@@ -27,6 +27,12 @@
       background-color: getColor("accent");
 	 }
   }
+  &__text {
+	  @media (max-width:1199px) {
+		  font-size: 12px;
+		  line-height: 1.16;
+	  }
+  }
 }
 
 .term-field__icon {

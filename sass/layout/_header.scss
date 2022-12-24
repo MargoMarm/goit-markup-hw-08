@@ -4,5 +4,13 @@
   &-wrapper {
     display: flex;
     align-items: center;
+
+	 @media (max-width:767px) {
+		 justify-content: space-between;
+	 }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      justify-content: space-between;
+    }
   }
 }
