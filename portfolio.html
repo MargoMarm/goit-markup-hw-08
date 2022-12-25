@@ -23,23 +23,48 @@
   <body>
   <header class="header">
       <div class="container header-wrapper">
-        <nav class="nav">
-          <a class="logo logo--header" href="index.html"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
+        <a class="logo logo--header" href="index.html"
+          ><span class="logo__accent">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mob-menu__icon" width="19" height="19">
+            <use href="./images/sprite.svg#icon-mobmenu_btn"></use>
+          </svg>
+        </button>
+		  <div class="menu-container js-menu-container" id="mobile-menu">
+			   <button
+          type="button"
+          class="menu-toggle js-close-menu mob-menu__btn"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mob-menu__icon" width="19" height="19">
+            <use href="./images/sprite.svg#icon-close_mobmenu"></use>
+          </svg>
+        </button>
+			   <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link ">Студія</a>
+              <a href="index.html" class="nav__link "
+                >Студія</a
+              >
             </li>
             <li class="nav__item">
               <a href="portfolio.html" class="nav__link nav__link--current">Портфоліо</a>
             </li>
-            <li class="nav__item"><a href="#" class="nav__link">Контакти</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакти</a>
+            </li>
           </ul>
-        </nav>
-        <ul class="contacts">
+        		</nav>
+   		 <ul class="contacts">
           <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
+            <a href="mailto:info@devstudio.com" class="contacts__link contacts__link-mobmenu">
               <svg class="contacts__icon" width="16" height="12">
                 <use href="./images/sprite.svg#icon-email"></use>
               </svg>
@@ -55,6 +80,14 @@
             >
           </li>
         </ul>
+		  <ul class="mob-menu__social ">
+			  <li class="mob-menu__social-item"><a class="mob-menu__social-link" href="#">Instagram</a></li>
+			  <li class="mob-menu__social-item"><a class="mob-menu__social-link" href="#">Twitter</a></li>
+			  <li class="mob-menu__social-item"><a class="mob-menu__social-link" href="#">Facebook</a></li>
+			  <li class="mob-menu__social-item"><a class="mob-menu__social-link" href="#">LinkedIn</a></li>
+		  </ul>
+		  </div>
+  
       </div>
     </header>
     <main>
@@ -367,5 +400,12 @@
         </div>
       </div>
     </footer>
+	 <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
