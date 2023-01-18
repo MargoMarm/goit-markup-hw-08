@@ -17,8 +17,12 @@
     padding-top: 25px;
     padding-bottom: 25px;
     color: getColor("title");
+
+	  @media (min-width:768px) {
+	 margin-right: 88px;
+ }
   }
- 
+
   @media (min-width: 1200px) {
     margin-right: 93px;
   }

@@ -286,6 +286,12 @@ a {
   color: #212121;
 }
 
+@media (min-width: 768px) {
+  .logo--header {
+    margin-right: 88px;
+  }
+}
+
 @media (min-width: 1200px) {
   .logo {
     margin-right: 93px;
